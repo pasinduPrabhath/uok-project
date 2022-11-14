@@ -40,3 +40,12 @@ body {
     position: relative;
     /* margin-left: 2%; */
 }
+
+.welcome-message{
+  padding-top: 34px;
+}
+
+.date-time{
+  float: right;
+  
+}
