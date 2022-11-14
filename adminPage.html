@@ -7,14 +7,14 @@
   <body>
     <div id="navbar">
       <a href="#home">Log out</a>
-      <img
+      <!-- <img
         class="profile-img"
         src="/assets/logo.png"
         width="80"
         height="50"
         alt="logo"
         align="CENTER"
-      />
+      /> -->
       <img
         class="logo-img"
         src="/assets/logo.png"
@@ -37,17 +37,6 @@
       </p>
     </div>
 
-    <script>
-      var prevScrollpos = window.pageYOffset;
-      window.onscroll = function () {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-          document.getElementById("navbar").style.top = "0";
-        } else {
-          document.getElementById("navbar").style.top = "-50px";
-        }
-        prevScrollpos = currentScrollPos;
-      };
-    </script>
+    <script src="adminPage.js"></script>
   </body>
 </html>
