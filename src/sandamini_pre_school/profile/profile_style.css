@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+
+body {
+    background: rgb(99, 39, 120);
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8;
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none;
+}
+
+.profile-button:hover {
+    background: #682773;
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none;
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none;
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer;
+}
+
+.labels {
+    font-size: 11px;
+}
+
+
+
+.navbar{      
+    width: 100%;
+    
+    
+}
+.logo{
+    color:rgb(19, 18, 18);
+    font-family: 'Kaushan Script', cursive;
+    letter-spacing: 3px;
+    font-size: 20pX;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 70px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 0px;
+    background-color:rgb(228, 228, 228);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a{
+    color: rgb(33, 33, 33);
+    text-decoration: none;
+    font-weight:400;
+}
+#payment{
+    display: none;
+}
+
+nav ul li a:hover{
+    color: red;
+    transition: 0.5s;
+}
+nav button{
+    background-color: rgb(76, 76, 247);
+    border: none;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px 32px;
+    border-radius: 6%;
+}
+
