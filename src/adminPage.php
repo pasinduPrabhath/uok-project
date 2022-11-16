@@ -10,6 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
     />
+    <?php
+include("db.php");
+?>
   </head>
   <body>
     <div id="navbar">
@@ -78,8 +81,8 @@
               <span class="blog-post-card4-text"><span>JULY 24</span></span>
               <span class="blog-post-card4-text1">
                 <span>
-                  Lorem ipsum lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit.
+                  Lorem ipsum lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.
                 </span>
               </span>
               <div class="blog-post-card4-separator"></div>
@@ -98,8 +101,8 @@
               <span class="blog-post-card4-text"><span>JULY 24</span></span>
               <span class="blog-post-card4-text1">
                 <span>
-                  Lorem ipsum lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit.
+                  Lorem ipsum lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit.
                 </span>
               </span>
               <div class="blog-post-card4-separator"></div>
@@ -132,12 +135,67 @@
           </div>
         </div>
       </div>
-    
+    </div>
+
     <div class="card">
       <div class="card-content">
         <div class="details">
-          <div class="title"><p>Notices</p></div>
-          <button>Add Notices</button>
+          <div class="title"><p>Students</p></div>
+          <button onclick="showPopUp()">View Students</button>
+        </div>
+      </div>
+      <div id="popUps" class="popup">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">
+              <?php echo $deleteMsg??''; ?>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>S.N</th>
+
+                      <th>Name</th>
+                      <th>address</th>
+                      <th>birthday</th>
+                      <th>parentName</th>
+                      <th>phoneNumber</th>
+                      <th>token</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <?php
+               if(is_array($fetchData)){      
+               $sn=1;
+               foreach($fetchData as $data){
+             ?>
+                    <tr>
+                      <td><?php echo $sn; ?></td>
+                      <td><?php echo $data['name']??''; ?></td>
+                      <td><?php echo $data['address']??''; ?></td>
+                      <td><?php echo $data['birthday']??''; ?></td>
+                      <td><?php echo $data['parentName']??''; ?></td>
+                      <td><?php echo $data['phoneNumber']??''; ?></td>
+                      <td><?php echo $data['token']??''; ?></td>
+                    </tr>
+                    <?php
+               $sn++;}}else{ ?>
+                    <tr>
+                      <td colspan="8">
+                        <?php echo $fetchData; ?>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <?php
+             }?>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -146,11 +204,6 @@
       <p>Paid Students</p>
     </section>
 
-    <section class="content">
-      <p>Students</p>
-    </section>
-
     <script src="adminPage.js"></script>
-   
   </body>
 </html>

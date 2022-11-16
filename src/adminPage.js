@@ -7,4 +7,9 @@ var prevScrollpos = window.pageYOffset;
           document.getElementById("navbar").style.top = "-50px";
         }
         prevScrollpos = currentScrollPos;
-      };
+};
+      
+function showPopUp() {
+  var x = document.getElementById("popUps");
+  x.style.display = 'block';
+}
