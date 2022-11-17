@@ -199,7 +199,7 @@ include("db.php");
           <button onclick="showPaidPopUp()">View Paid Students</button>
         </div>
     </div>
-    <div id="paidpopUps" class="popup" >
+    <div id="paidpopUps" class="popup2" >
         <div class="container" >
           <h1 style = "float:right; margin-top: -2%;" id="close" onclick="hidePaidPopUp()">x</h1>
           <div class="row">
@@ -215,7 +215,6 @@ include("db.php");
                       <th>birthday</th>
                       <th>parentName</th>
                       <th>phoneNumber</th>
-                      <th>paidStat</th>
                     </tr>
                   </thead>
 
@@ -232,7 +231,6 @@ include("db.php");
                       <td><?php echo $data['birthday']??''; ?></td>
                       <td><?php echo $data['parentName']??''; ?></td>
                       <td><?php echo $data['phoneNumber']??''; ?></td>
-                      <td><?php echo $data['paidStat']??''; ?></td>
                     </tr>
                     <?php
                $sn++;}}else{ ?>
@@ -253,7 +251,14 @@ include("db.php");
           </div>
         </div>
       </div>
-
-    <script src="adminPage.js"></script>
+    </div>
+    
+    <div class="card-content"  >
+        <div class="details">
+          <div class="title"><p>Token</p></div>
+          <button onclick="window.location.href='token.php'">View Token</button>
+        </div>
+    </div>
+  <script src="adminPage.js"></script>
   </body>
 </html>
