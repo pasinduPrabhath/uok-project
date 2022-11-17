@@ -42,21 +42,19 @@ include("db.php");
           class="blog-post-card4-blog-post-card blog-post-card4-root-class-name1"
         >
           <img
-            alt="image"
-            src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fHZlbmljZXxlbnwwfHx8fDE2MjYyNzIyOTA&amp;ixlib=rb-1.2.1&amp;w=1000"
+            alt="Total Students"
+            src="./students.jpg"
             class="blog-post-card4-image"
           />
           <div class="blog-post-card4-container">
-            <span class="blog-post-card4-text"><span>JULY 24</span></span>
             <span class="blog-post-card4-text1">
               <span>
-                Lorem ipsum lorem ipsum dolor sit amet, consectetur adipiscing
-                elit.
+                48
               </span>
             </span>
             <div class="blog-post-card4-separator"></div>
             <span class="blog-post-card4-text2">
-              <span>Business &amp; Travel</span>
+              <span>Students</span>
             </span>
           </div>
         </div>
@@ -65,41 +63,37 @@ include("db.php");
             class="blog-post-card4-blog-post-card blog-post-card4-root-class-name2"
           >
             <img
-              alt="image"
-              src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDN8fHRyYXZlbHxlbnwwfHx8fDE2MjY0MzI2Mjc&amp;ixlib=rb-1.2.1&amp;h=1000"
+              alt="paid Students"
+              src="./paidStudents.jpg"
               class="blog-post-card4-image"
             />
             <div class="blog-post-card4-container">
-              <span class="blog-post-card4-text"><span>JULY 24</span></span>
               <span class="blog-post-card4-text1">
                 <span>
-                  Lorem ipsum lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit.
+                  30
                 </span>
               </span>
               <div class="blog-post-card4-separator"></div>
-              <span class="blog-post-card4-text2"><span>Nature</span></span>
+              <span class="blog-post-card4-text2"><span>Paid Students</span></span>
             </div>
           </div>
           <div
             class="blog-post-card4-blog-post-card blog-post-card4-root-class-name3"
           >
             <img
-              alt="image"
-              src="https://images.unsplash.com/photo-1446822775955-c34f483b410b?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDI0fHx0cmF2ZWwlMjBmb29kfGVufDB8fHx8MTYyNjQ1Mjg0Ng&amp;ixlib=rb-1.2.1&amp;w=1000"
+              alt="notices"
+              src="./activeNotice.png"
               class="blog-post-card4-image"
             />
             <div class="blog-post-card4-container">
-              <span class="blog-post-card4-text"><span>JULY 24</span></span>
               <span class="blog-post-card4-text1">
                 <span>
-                  Lorem ipsum lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit.
+                  4
                 </span>
               </span>
               <div class="blog-post-card4-separator"></div>
               <span class="blog-post-card4-text2">
-                <span>Food &amp; Drink</span>
+                <span>Active Notices</span>
               </span>
             </div>
           </div>
@@ -108,21 +102,21 @@ include("db.php");
           class="blog-post-card4-blog-post-card blog-post-card4-root-class-name4"
         >
           <img
-            alt="image"
-            src="https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fGJvYXR8ZW58MHx8fHwxNjI2NDUyODIx&amp;ixlib=rb-1.2.1&amp;w=1000"
+            alt="availableSpace"
+            src="./availableSpace.jpg"
             class="blog-post-card4-image"
+            width="600"
+            height="337"
           />
           <div class="blog-post-card4-container">
-            <span class="blog-post-card4-text"><span>JULY 24</span></span>
             <span class="blog-post-card4-text1">
               <span>
-                Lorem ipsum lorem ipsum dolor sit amet, consectetur adipiscing
-                elit.
+               30
               </span>
             </span>
             <div class="blog-post-card4-separator"></div>
             <span class="blog-post-card4-text2">
-              <span>Foods &amp; Drink</span>
+              <span>Available Seats</span>
             </span>
           </div>
         </div>
@@ -146,7 +140,7 @@ include("db.php");
                 <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th>S.N</th>
+                      <th>ID</th>
 
                       <th>Name</th>
                       <th>address</th>

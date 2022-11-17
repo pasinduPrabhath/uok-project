@@ -233,6 +233,15 @@ body {
   margin-top: -25%;
   
 }
+.popup th{
+  padding: 0 10px;
+}
+ .popup td{
+  padding: 0 8px;
+  padding: 6px;
+   padding-top: 9px; 
+} 
+
 
 .popup2{
 
@@ -255,9 +264,22 @@ body {
   
 }
 
+.popup2 th{
+  padding: 0 10px;
+}
+ .popup2 td{
+  padding: 0 8px;
+  padding: 6px;
+  padding-top: 9px; 
+} 
+.popup2 table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .popupToken{
 
-  width: calc(70% / 2 - 10px);
+  width: calc(100% / 2 - 10px);
   height: 10%;
   margin: 0 20px;
   justify-content: space-between;
@@ -272,7 +294,20 @@ body {
   margin-bottom: 10%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10%;
+  margin-top: 5%;
   
 }
 
+.popupToken td{
+  padding: 0 15px;
+  /* padding: 5px; */
+  padding-top: 5px;
+}
+.popupToken th{
+  padding: 15px;
+}
+
+.table-table-bordered{
+  margin-left: auto;
+    margin-right: auto;
+}

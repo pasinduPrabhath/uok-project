@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Token</title>
     <link rel="stylesheet" href="adminPage.css" />
+    <link rel="stylesheet" href="token-style.css">
     <?php
 include("db.php");
 ?>
@@ -23,13 +24,14 @@ include("db.php");
         alt="logo"
         align="CENTER"
       />
-    </div>
+  </div>
 
-    <h1>Token</h1>
-    <button onclick="generate_token(4)">Genarate Token</button>
+    <div class="token-class">
 
+    <h1>Genarate a Token</h1>
+    
+    
     <form action="#" method="post">
-      <label for="tokenNumber">Token number:</label>
       <input
         type="text"
         name="token"
@@ -37,11 +39,15 @@ include("db.php");
         value="Generate Token Number"
         onkeydown="return false"
       />
+      
       <input type="submit" value="Accept Token" id="tokenAccept">
     </form>
-    
+    <button onclick="generate_token(4)">Genarate Token</button>
 
-    <div id="paidpopUps" class="popupToken" >
+
+    </div>
+    
+    <!-- <div id="paidpopUps" class="popupToken" >
         <div class="container" >
           <div class="row">
             <div class="col-sm-8">
@@ -85,8 +91,64 @@ include("db.php");
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
+    <div id="popUps" class="popupToken" >
+        <div class="container" >
+          <h1 style = "float:right; margin-top: -2%;" id="close" onclick="hidePopUp()">x</h1>
+          <div class="row">
+            <div class="col-sm-8">
+              <?php echo $deleteMsg??''; ?>
+              <div class="table-responsive">
+                <table class="table-table-bordered">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+
+                      <th>Name</th>
+                      
+                      
+                      <th>Email</th>
+                      <th>phoneNumber</th>
+                      <th>token</th>
+                    </tr>
+                    <tr></tr><tr></tr>
+                  </thead>
+
+                  <tbody>
+                    <?php
+               if(is_array($fetchData)){      
+               $sn=1;
+               foreach($fetchData as $data){
+             ?>
+                    <tr>
+                      <td><?php echo $sn; ?></td>
+                      <td><?php echo $data['name']??''; ?></td>
+                      
+                      
+                      <td><?php echo $data['parentName']??''; ?></td>
+                      <td><?php echo $data['phoneNumber']??''; ?></td>
+                      <td><?php echo $data['token']??''; ?></td>
+                    </tr>
+                    <?php
+               $sn++;}}else{ ?>
+                    <tr>
+                      <td colspan="8">
+                        <?php echo $fetchData; ?>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <?php
+             }?>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <?php
 include("connection.php");
 
@@ -99,7 +161,7 @@ $tokenNum = $_REQUEST['token'];
 $sql = "INSERT INTO token(token) VALUES ('$tokenNum')";
 
 if(mysqli_query($db,$sql)){
-    echo "success!";
+    // echo "success!";
 }
 else {
     echo "Error!";
