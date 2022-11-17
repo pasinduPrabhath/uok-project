@@ -13,3 +13,18 @@ function showPopUp() {
   var x = document.getElementById("popUps");
   x.style.display = 'block';
 }
+
+function hidePopUp() {
+  var x = document.getElementById("popUps");
+  x.style.display = 'none';
+}
+
+function showPaidPopUp() {
+  var x = document.getElementById("paidpopUps");
+  x.style.display = 'block';
+}
+
+function hidePaidPopUp() {
+  var x = document.getElementById("paidpopUps");
+  x.style.display = 'none';
+}

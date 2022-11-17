@@ -14,20 +14,12 @@
 include("db.php");
 ?>
   </head>
-  <body>
+  <body >
     <div id="navbar">
       <a href="#home">Log out</a>
-      <!-- <img
-        class="profile-img"
-        src="/assets/logo.png"
-        width="80"
-        height="50"
-        alt="logo"
-        align="CENTER"
-      /> -->
       <img
         class="logo-img"
-        src="/assets/logo.png"
+        src="./assets/logo.png"
         width="80"
         height="50"
         alt="logo"
@@ -138,14 +130,15 @@ include("db.php");
     </div>
 
     <div class="card">
-      <div class="card-content">
+      <div class="card-content"  >
         <div class="details">
           <div class="title"><p>Students</p></div>
           <button onclick="showPopUp()">View Students</button>
         </div>
       </div>
-      <div id="popUps" class="popup">
-        <div class="container">
+      <div id="popUps" class="popup" >
+        <div class="container" >
+          <h1 style = "float:right; margin-top: -2%;" id="close" onclick="hidePopUp()">x</h1>
           <div class="row">
             <div class="col-sm-8">
               <?php echo $deleteMsg??''; ?>
@@ -200,9 +193,66 @@ include("db.php");
       </div>
     </div>
 
-    <section class="content">
-      <p>Paid Students</p>
-    </section>
+    <div class="card-content"  >
+        <div class="details">
+          <div class="title"><p>Paid Students</p></div>
+          <button onclick="showPaidPopUp()">View Paid Students</button>
+        </div>
+    </div>
+    <div id="paidpopUps" class="popup" >
+        <div class="container" >
+          <h1 style = "float:right; margin-top: -2%;" id="close" onclick="hidePaidPopUp()">x</h1>
+          <div class="row">
+            <div class="col-sm-8">
+              <?php echo $deleteMsg??''; ?>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>S.N</th>
+                      <th>Name</th>
+                      <th>address</th>
+                      <th>birthday</th>
+                      <th>parentName</th>
+                      <th>phoneNumber</th>
+                      <th>paidStat</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <?php
+               if(is_array($fetchData2)){      
+               $sn=1;
+               foreach($fetchData2 as $data){
+             ?>
+                    <tr>
+                      <td><?php echo $sn; ?></td>
+                      <td><?php echo $data['name']??''; ?></td>
+                      <td><?php echo $data['address']??''; ?></td>
+                      <td><?php echo $data['birthday']??''; ?></td>
+                      <td><?php echo $data['parentName']??''; ?></td>
+                      <td><?php echo $data['phoneNumber']??''; ?></td>
+                      <td><?php echo $data['paidStat']??''; ?></td>
+                    </tr>
+                    <?php
+               $sn++;}}else{ ?>
+                    <tr>
+                      <td colspan="8">
+                        <?php echo $fetchData; ?>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <?php
+             }?>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script src="adminPage.js"></script>
   </body>
